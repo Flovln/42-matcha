@@ -1,0 +1,7 @@
+- install all packages :> sh install.sh
+- start mongo server :> mongod -dbpath ~/data/db || mongod
+- start mongo cli :> mongo
+- start backend server :> cd app/back yarn start-back
+- start frontend server :> cd app/front yarn start
+- set collections :> localhost:3000/api/setcollections
+- connect to client from navigator :> localhost:8080
