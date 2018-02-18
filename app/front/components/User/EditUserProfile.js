@@ -8,7 +8,7 @@ import { asyncContainer, Typeahead } from 'react-bootstrap-typeahead'
 import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-maps"
 import InfoBox from "react-google-maps/lib/components/addons/InfoBox"
 
-import config from '../../config'
+import config from '../../config/config'
 
 import {  uploadImage,
           loadUserPublicInfos,

@@ -4,7 +4,51 @@ Ecole 42 project
 
 ## Goal
 
-Matcha is a dating web application based on geolocation and matching.
+Matcha is a dating web application based on geolocation and matching between users.
+
+## Application anatomy
+
+### Back-end server
+
+- ./app/back
+    - ./assets
+	- ./config
+		- config.js
+		- routes.js
+    - ./controllers
+    - ./models
+    - ./policies
+    - ./repository
+    - ./server
+    - ./services
+    - ./uploads
+	- index.js
+	- package.json
+
+### Front-end server
+
+- ./app/front
+	- ./actions
+        - ./Auth
+        - ./Tags
+        - ./User
+	- ./components
+        - ./Auth
+        - ./User
+	- ./config
+        - config.js
+	- ./containers
+        - routes.js
+    - ./helpers
+	- ./reducers
+        - Auth
+        - Tags
+        - User
+    - ./style
+	- index.html
+	- index.js
+	- package.json
+    - webpack.config.js
 
 ## Set up
 

@@ -12,7 +12,7 @@ import {  loadMatchingUsers,
           getTagsPool
         } from '../../actions/index'
 
-import config from '../../config'
+import config from '../../config/config'
 
 const OrderList = props => {
   return (

@@ -1,3 +1,5 @@
+'use strict'
+
 const express = require('express');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
@@ -23,10 +25,7 @@ module.exports.start = (app, options) => {
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({extended: true}));
 
-//    app.use(express.static(path.join(__dirname, '../uploads')))
-//    http://localhost:3000/a49dfda65f35f9eadb4edec7b5eca9da
     app.use('/uploads', express.static(path.join(__dirname, '../uploads')))
-//    http://localhost:3000/uploads/a49dfda65f35f9eadb4edec7b5eca9da
     app.use('/assets', express.static(path.join(__dirname, '../assets')))
 
 
