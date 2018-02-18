@@ -1,4 +1,5 @@
-"use strict"
+'use strict'
+
 const jwt = require('jsonwebtoken');
 
 module.exports = {
@@ -17,7 +18,6 @@ module.exports = {
         if (err) {
           console.log('error: ', err)
           return res.status(403).send({ error: 'Wrong token : ' + err });
-//            return res.status(200).send({ error: 'Wrong token : ' + err });
         } else {
           req.decoded = decoded;
           next();        

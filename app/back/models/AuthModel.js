@@ -1,4 +1,5 @@
-"use strict"
+'use strict'
+
 const cryptoService = require('../services/CryptoServices')
 const mailService = require('../services/mailService')
 const geolocalisationService = require('../services/GeolocalisationServices')

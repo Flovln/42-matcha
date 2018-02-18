@@ -1,4 +1,5 @@
-"use strict"
+'use strict'
+
 const userModel = require('../models/UserModel');
 
 const user = {

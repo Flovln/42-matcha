@@ -1,4 +1,5 @@
 'use strict'
+
 const tagsModel = require('../models/TagsModel')
 
 const tags = {

@@ -1,11 +1,12 @@
-"use strict"
+'use strict'
+
 const geolib = require('geolib')
 const moment = require('moment')
 
 const ObjectId = require('mongodb').ObjectId;
 
 const authPolicies = require('../policies/AuthPolicies')
-const userPolicies = require('../policies/UserPolicies')
+const userServices = require('../services/UserServices')
 const cryptoService = require('../services/CryptoServices')
 const matchingService = require('../services/MatchingService')
 const geolocalisationService = require('../services/GeolocalisationServices')
@@ -411,7 +412,7 @@ const userModule = {
   editUserInterests: (db, user_id, data) => {
     return new Promise((resolve, reject) => {
 
-      userPolicies.normalizeTagsArray(data.interests).then((tags) => {
+      userServices.normalizeTagsArray(data.interests).then((tags) => {
         tagsModel.addInterestsToPool(db, tags).then(() => {
           db.collection('users').update({"_id" : new ObjectId(user_id)}, {$set: {interests: tags} }, null).then((res) => {
             userModule.userGetPublicInfos(db, user_id).then((infos) => {

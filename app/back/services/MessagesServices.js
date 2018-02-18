@@ -1,4 +1,4 @@
-"use strict"
+'use strict'
 
 const policies = {
   appendNewContact: (sender, sender_id, receiver, threads, data) => {

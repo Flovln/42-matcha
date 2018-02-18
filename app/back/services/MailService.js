@@ -1,4 +1,4 @@
-"user strict"
+'use strict'
 
 const nodemailer = require('nodemailer');
 const secret = require('../config/secret.js');
@@ -35,7 +35,6 @@ module.exports = {
   sendResetEmail: (data, token) => {
     const login = data.username;
     const url = config.application_address+config.frontServer.port+'/password_new?login='+login+'&token='+token
-//    const link = '<a target="_blank href="'+ url +'">Click here to activate your account</a>'
 
     const infos = {
       from: 'matcha@love.fr',

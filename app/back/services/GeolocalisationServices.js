@@ -1,8 +1,8 @@
 'use strict'
+
 const iplocation = require('iplocation')
 const validator = require('validator')
 const NodeGeocoder = require('node-geocoder')
-//external-ip node package instead of hardcoding
 
 const googleMapkey = require('../config/config.js').googleMapKey
 const options = {

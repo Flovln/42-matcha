@@ -1,4 +1,5 @@
-"use strict"
+'use strict'
+
 const authModel = require('../models/AuthModel');
 const mailService = require('../services/MailService');
 const jwtService = require('../services/JwtService');

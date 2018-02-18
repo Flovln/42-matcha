@@ -1,8 +1,8 @@
-"use strict"
+'use strict'
 
 const ObjectId = require('mongodb').ObjectId;
 
-module.exports = {
+const policies = {
   normalizeTagsArray: (data) => {
     return new Promise((resolve, reject) => {
 
@@ -42,3 +42,5 @@ module.exports = {
     })
   }
 }
+
+module.exports = policies;

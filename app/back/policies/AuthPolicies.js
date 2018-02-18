@@ -1,6 +1,6 @@
-"use strict"
-/* Policies are use for all the independent checking cases before and related controllers next query */
+'use strict'
 
+/* Policies are use for all the independent checking cases before and related controllers next query */
 const policies = {
   validateEmail: (email) => {
     const regex = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/

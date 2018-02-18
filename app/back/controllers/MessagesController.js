@@ -1,4 +1,5 @@
-"use strict"
+'use strict'
+
 const ObjectId = require('mongodb').ObjectId;
 
 const messageModel = require('../models/MessagesModel');

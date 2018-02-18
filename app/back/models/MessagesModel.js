@@ -1,6 +1,7 @@
-"use strict"
+'use strict'
+
 const ObjectId = require('mongodb').ObjectId;
-const MessagesPolicies = require('../policies/MessagesPolicies');
+const MessagesServices = require('../services/MessagesServices');
 
 const messages = {
   getUserThreads: (db, user_id) => {
@@ -22,10 +23,10 @@ const messages = {
 
         /* Add contact to threads if first interaction */
         if (threads_infos.threads[receiver] == undefined){
-          return MessagesPolicies.appendNewContact(sender, user.user_id, receiver, threads_infos.threads, content);
+          return MessagesServices.appendNewContact(sender, user.user_id, receiver, threads_infos.threads, content);
         /* Append new content/messages to existing contact */
         } else {
-          return MessagesPolicies.appendNewMessage(sender, user.user_id, receiver, threads_infos.threads, content);
+          return MessagesServices.appendNewMessage(sender, user.user_id, receiver, threads_infos.threads, content);
         }
 
       }).then((updatedThreads) => {
@@ -50,10 +51,10 @@ const messages = {
 
         /* Add contact to threads if first interaction */
         if (threads_infos.threads[sender] == undefined){
-          return MessagesPolicies.appendNewContactReceiver(sender, sender_id, receiver, threads_infos.threads, data)
+          return MessagesServices.appendNewContactReceiver(sender, sender_id, receiver, threads_infos.threads, data)
         /* Append new content/messages to existing contact */
         } else {
-         return MessagesPolicies.appendNewMessageReceiver(sender, sender_id, receiver, threads_infos.threads, data);
+         return MessagesServices.appendNewMessageReceiver(sender, sender_id, receiver, threads_infos.threads, data);
         }
       }).then((updatedThreads) => {
         db.collection('users').update({ "username": receiver}, {$set: { threads: updatedThreads }, $inc: {"notifications.messages": 1} }, null).then(() => {

@@ -1,3 +1,5 @@
+'use strict'
+
 const collections = {
   createCollections: (req, res) => {
     req.app.db.createCollection("users");
