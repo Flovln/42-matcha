@@ -1,0 +1,202 @@
+# 42-matcha - Overview
+
+A Meetic-like web application.
+
+## Required specifications
+
+- Compatibilty
+	- Firefox (V. 41+)
+	- Chrome (V. 46+)
+- UX/UI
+	- Header
+	- Main section
+- Responsive on mobile resolutions (low to high)
+- Security
+	- Encrypted passwords
+	- XSS injections free
+	- Upload content validation
+	- SQL injections
+
+## Required functionnalities
+
+- User profile
+	- Registering
+		- Mail
+		- Username
+		- First name
+		- Last name
+		- Birth date
+		- Ruled password (Front-end/Back-end)
+	- Login
+		- Username
+		- Password
+	- Reset password
+		- Email
+	- Logout (From anywhere)
+	- Profile edition
+		- Gender
+		- Sexual orientation
+			- If not set, bisexuality is defined by default
+		- Biography
+		- Interests (As tags #love)
+			- Tags must be reusable by all users
+		- Pictures
+			- Limited to 5
+			- One for profile
+	- Monitoring
+		- Peoples who went on profile
+		- Peoples who liked the profile
+	- Popularity score
+	- Geolocation
+		- Must be editable on profile
+		- Must be precise
+		- Must be done if navigator geolocation is disabled
+- Algorithm
+	- Profile suggestion
+		- Sexual orientation
+			- Must be filtered by obvious informations like `gender` or `sexual orientation`
+			- Bisexuality must be correctly handled
+		- Localization
+			- Nearest or same geographic zones
+			- Most interest tags in common
+			- Highest `popularity score`
+- Profile list
+	- Sortable by
+		- Age interval
+		- Distance
+		- `Popularity score` interval
+		- Tags
+	- Filterable by
+		- Age interval
+		- Distance
+		- `Popularity score` interval
+		- Tags
+	- Searchable by
+		- Age interval
+		- Distance
+		- `Popularity score` interval
+		- Tags
+- Primary functionnalities
+	- User profiles
+		- Must be consultable
+		- Must be `likable`/`unlikable`
+		- Must contains all informations about the user (Excluding Email/Password)
+			- Cf: **User profile**
+			- Online status must be visible (Online/Offline)
+			- Like status must be visible (Liked/NotLiked)
+		- Online status must be visible (Online/Offline)
+		- Can be reported
+		- Can be blocked
+			- A blocked user cannot generate any notification anymore
+			- A blocked user cannot appear in search results anymore
+	- Messages
+		- A new message notification must be viewable from anywhere on the app
+		- Only between matched users
+		- Real time chatting (10 seconds lag max)
+	- Notifications (Viewable from anywhere, readed/unread notification visual marker)
+		- User profile liked/unliked
+		- User profile matched with someone
+		- User profile consulted by another user
+		- A new private message received
+
+## Views
+
+- Landing page
+	- Unlog
+		- Registering
+			- Mail
+			- Username
+			- First name
+			- Last name
+			- Ruled password (Front-end/Back-end)
+		- Login
+			- Username
+			- Password
+		- Forgotten password
+			- Email
+		- Reset password
+	- LogIn
+		- Users list matching current user preferences
+- Public profile
+	- Gender
+	- Sexual orientation
+		- If not set, bisexuality is defined by default
+	- Biography
+	- Interests (As tags #love)
+		- Tags must be reusable by all users
+	- Pictures
+		- Limited to 5
+	- Popularity score
+	- Profile consultation
+		- User names
+	- Geolocation
+	- Online status (Public)
+	- Report action (Public)
+	- Like action (Public)
+	- Block action (Public)
+- Profile edition
+	- First name
+	- Last name
+	- Birth date
+	- Gender
+	- Sexual orientation
+		- If not set, bisexuality is defined by default
+	- Biography
+	- Interests (As tags #love)
+		- Tags must be reusable by all users
+	- Pictures
+		- Limited to 5
+- Account edition
+	- Mail
+	- Ruled password (Front-end/Back-end)
+- User feed
+	- Sortable by
+		- Age interval
+		- Localization
+		- `Popularity score` interval
+		- Tags
+	- Filterable by
+		- Age interval
+		- Localization
+		- `Popularity score` interval
+		- Tags
+	- Searchable by
+		- Age interval
+		- Localization
+		- `Popularity score` interval
+		- Tags
+- Messagery
+	- Users message list
+
+## Technology
+
+- Package managers
+	- Yarn
+- App Server
+	- NodeJS
+		- Modules
+			- Server
+				- `nodemon`
+				- `morgan`
+			- Back-end
+				- `express`
+				- `express-session`
+				- `body-parser`
+			- Front-end
+				- `babel`
+				- `babel-loader`
+				- `babel-preset-react`
+				- `react`
+				- `react-dom`
+				- `react-router`
+				- `react-router-dom`
+				- `redux`
+				- `webpack`
+- Middlewares
+	- Socket.io
+- Database
+	- MongoDB
+- CSS
+	- Bootstrap
+- Externals APIs
+	- Google maps

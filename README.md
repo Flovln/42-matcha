@@ -2,7 +2,7 @@
 
 Ecole 42 project
 
-## Goal
+## NodeJS + ReactJS/Redux isomorphic application
 
 Matcha is a dating web application based on geolocation and matching between users.
 
