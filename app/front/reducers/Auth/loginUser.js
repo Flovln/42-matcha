@@ -13,9 +13,9 @@ const loginUser = (state = INITIAL_STATE, action) => {
     case 'LOGIN_LOADING':
       return { ...state, loginLoading: action.isLoading }
     case 'LOGIN_SUCCESS':
-      return { ... state, loginSucceed: action.loginSucceed, session: !!localStorage.jwtToken }
+      return { ... state, loginSucceed: action.loginSucceed, session: !!localStorage.jwtToken, loginError: '' }
     case 'LOGIN_ERROR':
-      return { ... state, loginError: action.loginError }
+      return { ... state, loginError: action.loginError, loginSucceed: '' }
     case 'LOGOUT_SUCCESS':
       return { ... state, logoutSucceed: action.logoutSucceed, session: false }
     case 'LOGOUT_ERROR':

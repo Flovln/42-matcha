@@ -42,12 +42,10 @@ export const registerFetchData = data => {
     .then((response) => response.json())
     .then((res) => {
       if (res.error){
-        dispatch(registerSuccess(''))
-        dispatch(registerError(res.error)) //bad practice - to remove
+        dispatch(registerError(res.error))
       }
       else{
         dispatch(registerSuccess(res.message))
-        dispatch(registerError('')) //bad practice - to remove
       }
     })
     .catch((error) => {
@@ -55,6 +53,7 @@ export const registerFetchData = data => {
     })
   }
 }
+
 /* BAD PRACTICE */
 export const setRegisterActionsToDefault = () => {
   return dispatch => {

@@ -12,9 +12,9 @@ const registering = (state = INITIAL_STATE, action) => {
     case 'REGISTER_LOADING':
       return { ...state, registerLoading: action.isLoading }
     case 'REGISTER_SUCCESS':
-      return { ...state, registerSucceed: action.registerSucceed }
+      return { ...state, registerSucceed: action.registerSucceed, registerError: '' }
     case 'REGISTER_ERROR':
-      return { ...state, registerError: action.hasErrored }
+      return { ...state, registerError: action.hasErrored, registerSucceed: '' }
     case 'ACTIVATE_ACCOUNT_SUCCESS':
       return { ...state, activateSucceed: action.activateSucceed }
     case 'ACTIVATE_ACCOUNT_ERROR':

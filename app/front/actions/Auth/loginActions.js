@@ -45,13 +45,11 @@ export const loginFetchData = (data, history) => {
     .then((response) => response.json())
     .then((res) => {
       if (res.error){
-        dispatch(loginSuccess('')) // bad practice - to remove
         dispatch(loginError(res.error))
       } else {
         localStorage.setItem('jwtToken', res.token)
         localStorage.setItem('login', res.informations.login)
         dispatch(loginSuccess(res.message))
-        dispatch(loginError('')) // bad practice - to remove
         history.push('/')
       }
     })

@@ -32,11 +32,9 @@ export const sendResetEmail = data => {
     .then((response) => response.json())
     .then((res) => {
       if (res.error){
-        dispatch(emailSentSuccess('')) //bad practice - to remove
         dispatch(emailSentError(res.error))
       } else {
         dispatch(emailSentSuccess(res.message))
-        dispatch(emailSentError('')) //bad practice - to remove
       }
     })
     .catch((error) => dispatch(emailSentError('error sending email')))
@@ -83,11 +81,9 @@ export const newPasswordFetchData = data => {
     .then((response) => response.json())
     .then((res) => {
       if (res.error){
-        dispatch(setNewPasswordSuccess('')) //bad practice - to remove
         dispatch(setNewPasswordError(res.error))
       } else {
         dispatch(setNewPasswordSuccess(res.message))
-        dispatch(setNewPasswordError(''))  //bad practice - to remove
       }
     })
     .catch((error) => dispatch(setNewPasswordError('request error ')))
