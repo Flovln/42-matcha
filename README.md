@@ -1,6 +1,6 @@
 # 42-matcha
 
-Ecole 42 project
+Ecole 42 Paris solo project
 
 ## NodeJS + ReactJS/Redux isomorphic application
 
@@ -79,3 +79,23 @@ or
 ➜ localhost:8080
 
 ```
+
+## UI snippets
+
+Discovering Page:
+
+![Discover page](./screenshots/search_page.png)
+
+Recommendation Page:
+
+![Recommendation page](./screenshots/recommendation_page.png)
+
+Edit Profile Page:
+
+![Edit profile page](./screenshots/edit_profile_page.png)
+
+Messaging Page:
+
+![Messaging page](./screenshots/instant_conversation_page.png)
+
+For more pictures about the application UI go to the screenshots folder.
