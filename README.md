@@ -2,9 +2,9 @@
 
 Ecole 42 Paris solo project
 
-## NodeJS + ReactJS/Redux isomorphic application
+## NodeJS + ReactJS/Redux + Socket.io + Google Map application
 
-Matcha is a dating web application based on geolocation and matching between users.
+Matcha is a dating web application based on geolocation, live notification, live messaging and matching between users.
 
 ## Application anatomy
 
@@ -49,6 +49,8 @@ Matcha is a dating web application based on geolocation and matching between use
 	- index.js
 	- package.json
     - webpack.config.js
+
+You can find more informations about the features and technologies used for this project within the "documentation" repository.  
 
 ## Set up
 

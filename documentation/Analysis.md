@@ -1,6 +1,6 @@
 # 42-matcha - Overview
 
-A Meetic-like web application.
+A Meetic/Tinder-like web application.
 
 ## Required specifications
 
@@ -168,7 +168,7 @@ A Meetic-like web application.
 - Messagery
 	- Users message list
 
-## Technology
+## Technologies
 
 - Package managers
 	- Yarn
